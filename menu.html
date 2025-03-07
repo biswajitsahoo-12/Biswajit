@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+
+</head>
+<body>
+    <header>
+        <h1>SAHOO DHABA</h1>
+        <nav>
+            <ul>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="cart.html">Your Cart</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+            <div class="food-item" data-name="Burger" data-price="8">
+                <img src="burger.jpg" alt="Burger">
+                <h3>Burger</h3>
+                <p>₹99</p>
+                <button onclick="addToCart('Burger', 8)">Add to Cart</button>
+            </div>
+            <div class="food-item" data-name="Pizza" data-price="12">
+                <img src="pizza.jpg" alt="Pizza">
+                <h3>Pizza</h3>
+                <p>₹199</p>
+                <button onclick="addToCart('Pizza', 12)">Add to Cart</button>
+            </div>
+            <div class="food-item" data-name="Pasta" data-price="10">
+                <img src="pasta.webp" alt="Pasta">
+                <h3>Pasta</h3>
+                <p>₹49</p>
+                <button onclick="addToCart('Pasta', 10)">Add to Cart</button>
+            </div>
+            <div class="food-item" data-name="chicken-kebab" data-price="15">
+                <img src="chicken1.webp" alt="chicken-kebab">
+                <h3>chicken-kebab</h3>
+                <p>₹69</p>
+                <button onclick="addToCart('chicken-kebab', 15)">Add to Cart</button>
+            </div>
+            <div class="food-item" data-name="Steak" data-price="200">
+                <img src="paneer.jpg" alt="Steak">
+                <h3>Paneer Butter Masala</h3>
+                <p>₹200</p>
+                <button onclick="addToCart('Steak', 20)">Add to Cart</button>
+            </div>
+            <div class="food-item" data-name="Salad" data-price="7">
+                <img src="salad.jpg" alt="Salad">
+                <h3>Salad</h3>
+                <p>₹70</p>
+                <button onclick="addToCart('Salad', 7)">Add to Cart</button>
+            </div>
+            <div class="food-item" data-name="Tacos" data-price="9">
+                <img src="tacos1.jpg" alt="Tacos">
+                <h3>Tacos</h3>
+                <p>$9</p>
+                <button onclick="addToCart('Tacos', 9)">Add to Cart</button>
+            </div>
+            <div class="food-item" data-name="Ice Cream" data-price="5">
+                <img src="ice1.jpg" alt="Ice Cream">
+                <h3>Ice Cream</h3>
+                <p>$5</p>
+                <button onclick="addToCart('Ice Cream', 5)">Add to Cart</button>
+            </div>
+            <div class="food-item" data-name="Soup" data-price="6">
+                <img src="soup.jpg" alt="Soup">
+                <h3>Soup</h3>
+                <p>$6</p>
+                <button onclick="addToCart('Soup', 6)">Add to Cart</button>
+            </div>
+            <div class="food-item" data-name="Sandwich" data-price="8">
+                <img src="sandwich1.jpg" alt="Sandwich">
+                <h3>Sandwich</h3>
+                <p>$8</p>
+                <button onclick="addToCart('Sandwich', 8)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

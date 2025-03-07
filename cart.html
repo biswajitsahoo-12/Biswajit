@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <header>
+        <h1>SAHOO DHABA</h1>
+        <nav>
+            <ul>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="cart.html">Your Cart</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="cart-items">
+        <h2>Items in Your Cart</h2>
+        <div id="cart-list"></div>
+        <h3 id="total-price">Total: $0</h3>
+        <button onclick="clearCart()">Clear Cart</button>
+    </section>
+    
+    <script>
+        function loadCart() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let cartList = document.getElementById('cart-list');
+            let totalPriceElement = document.getElementById('total-price');
+            cartList.innerHTML = '';
+            let total = 0;
+            
+            cart.forEach(item => {
+                let div = document.createElement('div');
+                div.classList.add('cart-item');
+                div.innerHTML = `<p>${item.name} x ${item.quantity} - $${item.price * item.quantity}</p>`;
+                cartList.appendChild(div);
+                total += item.price * item.quantity;
+            });
+            
+            totalPriceElement.textContent = `Total: $${total}`;
+        }
+        
+        function clearCart() {
+            localStorage.removeItem('cart');
+            loadCart();
+        }
+        
+        document.addEventListener('DOMContentLoaded', loadCart);
+    </script>
+        <script src="js.js"></script>
+
+</body>
+</html>
